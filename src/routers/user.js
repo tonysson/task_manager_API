@@ -73,32 +73,9 @@ router.post('/users/logoutAll', auth, async(req, res) =>{
 router.get('/users/me', auth , async (req, res) => {
     
    res.send(req.user);
-    // try {
-    //     const users = await User.find({});
-    //     res.send(users)
-    // } catch (error) {
-    //     res.status(500).send(error)
-    // }
+    
 });
 
-
-// router.get('/users/:id', async (req, res) => {
-
-//     const _id = req.params.id;
-
-//     try {
-//         const user = await User.findById(_id);
-//         if (!user) {
-//             return res.status(404).send();
-//         }
-
-//         res.send(user);
-
-//     } catch (error) {
-//         res.status(500).send(error);
-//     }
-
-// });
 
 router.patch('/users/me', auth, async (req, res) => {
 
